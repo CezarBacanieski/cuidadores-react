@@ -1,5 +1,5 @@
 import './CampoTexto.css';
-const CampoTexto = (props) => {
+export const CampoTexto = (props) => {
   return (
     <div className='campo-texto'>
       <label>{props.label}</label>
@@ -7,5 +7,3 @@ const CampoTexto = (props) => {
     </div>
   );
 };
-
-export default CampoTexto;
