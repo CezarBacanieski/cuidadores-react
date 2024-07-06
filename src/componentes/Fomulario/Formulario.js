@@ -1,3 +1,4 @@
+import Botao from '../Botao';
 import CampoTexto from '../CampoTexto';
 import { ListaSuspensa } from '../ListaSuspensa/ListaSuspensa';
 import './Formulario.css';
@@ -12,14 +13,28 @@ export const Formulario = () => {
     'So cuida de problema mental',
     'Nao da banho por nada',
   ];
+
+  const aoSalvar = (event) => {
+    event.preventDefault();
+    console.log('o form foi submetido');
+  };
   return (
     <section className='formulario'>
-      <form>
-        <h2>Preencha os dados para ser cuidadora da laime</h2>
-        <CampoTexto label='Nome' placeholder='Digite seu nome' />
-        <CampoTexto label='Cargo' placeholder='Digite seu cargo' />
+      <form onSubmit={aoSalvar}>
+        <h2>Preencha os dados da cuidadora da laime</h2>
+        <CampoTexto
+          obrigatorio={true}
+          label='Nome'
+          placeholder='Digite o nome'
+        />
+        <CampoTexto
+          obrigatorio={true}
+          label='Cargo'
+          placeholder='Digite o cargo'
+        />
         <CampoTexto label='Imagem' placeholder='Digite o endereço da imagem' />
-        <ListaSuspensa label='Time' itens={times} />
+        <ListaSuspensa obrigatorio={true} label='Time' itens={times} />
+        <Botao children='Criar Card Da Cuidadora' />
       </form>
     </section>
   );
