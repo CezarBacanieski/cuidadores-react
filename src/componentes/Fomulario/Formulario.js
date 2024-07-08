@@ -5,16 +5,6 @@ import { ListaSuspensa } from '../ListaSuspensa/ListaSuspensa';
 import './Formulario.css';
 
 export const Formulario = (props) => {
-  const times = [
-    'Cuida idoso bravo',
-    'Cuida de idoso bonzinho',
-    'So cuida de mulher',
-    'So cuida de homem',
-    'Nao cuida de problema mental',
-    'So cuida de problema mental',
-    'Nao da banho por nada',
-  ];
-
   const [nome, setNome] = useState('');
   const [cargo, setCargo] = useState('');
   const [imagem, setImagem] = useState('');
@@ -28,6 +18,10 @@ export const Formulario = (props) => {
       imagem,
       time,
     });
+    setNome('');
+    setCargo('');
+    setImagem('');
+    setTime('');
   };
   return (
     <section className='formulario'>
@@ -56,7 +50,7 @@ export const Formulario = (props) => {
         <ListaSuspensa
           obrigatorio={true}
           label='Time'
-          itens={times}
+          itens={props.times}
           valor={time}
           aoAlterado={(valor) => setTime(valor)}
         />
