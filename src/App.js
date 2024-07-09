@@ -6,37 +6,37 @@ import Time from './componentes/Time';
 function App() {
   const times = [
     {
-      nome: 'Cuida idoso bravo',
+      nome: 'Cuidador para Idosos de Alta Dependência',
       corPrimaria: '#57c278',
       corSecundaria: '#d9f7e9',
     },
     {
-      nome: 'Cuida de idoso bonzinho',
+      nome: 'Cuidador para Idosos de Baixa Dependência',
       corPrimaria: '#82CFFA',
       corSecundaria: '#E8F8FF',
     },
     {
-      nome: 'So cuida de mulher',
+      nome: 'Cuidador Especializado em Mulheres',
       corPrimaria: '#A6D157',
       corSecundaria: '#F0F8E2',
     },
     {
-      nome: 'So cuida de homem',
+      nome: 'Cuidador Especializado em Homens',
       corPrimaria: '#E06B69',
       corSecundaria: '#FDE7E8',
     },
     {
-      nome: 'Nao cuida de problema mental',
+      nome: 'Cuidador para Idosos sem Problemas Mentais',
       corPrimaria: '#DB6EBF',
       corSecundaria: '#FAE9F5',
     },
     {
-      nome: 'So cuida de problema mental',
+      nome: 'Cuidador para Idosos com Problemas Mentais',
       corPrimaria: '#FFBA05',
       corSecundaria: '#FFF5D9',
     },
     {
-      nome: 'Nao da banho por nada',
+      nome: 'Cuidador para Idosos sem Necessidades de Banho',
       corPrimaria: '#FF8A29',
       corSecundaria: '#FFEEDF',
     },
@@ -45,7 +45,6 @@ function App() {
   const [colaboradores, setColaboradores] = useState([]);
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    console.log(colaborador);
     setColaboradores([...colaboradores, colaborador]);
   };
 
